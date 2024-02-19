@@ -7,6 +7,7 @@
     <title>Bus Ticket</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="color.css">
 </head>
 
 <body>
@@ -29,8 +30,9 @@
                 the
                 app. The
                 integrated testing features allow for a streamlined .</p>
-            <button class="bg-green-500 text-white font-semibold text-xl px-6 py-3 rounded-lg mt-12">Buy
-                Tickets</button>
+            <a href="#ticket-part"><button
+                    class="bg-green-500 text-white font-semibold text-xl px-6 py-3 rounded-lg mt-12">Buy
+                    Tickets</button></a>
         </div>
     </section>
     <!-- coupon part -->
@@ -73,7 +75,7 @@
         </div>
     </section>
     <!-- ticket part -->
-    <section class="pt-12 border-t-4 border-green-200 rounded-3xl">
+    <section id="ticket-part" class="pt-12 border-t-4 border-green-200 rounded-3xl">
         <h1 class="text-5xl font-semibold text-center mt-6">Meu Paribahan</h1>
         <p class="text-xl text-gray-500 text-center w-1/2 mx-auto mt-6">Yes, you can run unit tests and view the results
             directly
@@ -93,7 +95,8 @@
                         </div>
                         <div class="flex items-center gap-4 bg-green-100 px-7 py-3 rounded-lg">
                             <img src="images/seat-green.png" alt="">
-                            <h2 class="text-2xl font-semibold text-green-500">40 seats left</h2>
+                            <h2 class="text-2xl font-semibold text-green-500"><span id="Total-seats">40</span> seats
+                                left</h2>
                         </div>
                     </div>
                     <div class="bg-slate-100 px-8 py-8 rounded-3xl mt-8">
@@ -130,6 +133,193 @@
                     <h2 class="text-2xl font-semibold text-gray-400">Per Seat</h2>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- calculate part -->
+    <section class="container mx-auto px-36 pb-12">
+        <div class="flex gap-20 items-center">
+            <div>
+                <!-- seat -->
+                <h2 class="text-2xl font-semibold">Select Your Seat</h2>
+                <hr class="border-dashed mt-4 bg-gray-400">
+                <div class="flex justify-between mt-4">
+                    <div class="flex justify-between items-center gap-2">
+                        <img src="images/seat-gray.png" alt="">
+                        <h2 class="text-xl text-gray-400">Available</h2>
+                    </div>
+                    <div class="flex justify-between items-center gap-2">
+                        <img src="images/seat-green.png" alt="">
+                        <h2 class="text-xl text-green-500">Selected</h2>
+                    </div>
+                </div>
+                <hr class="border-dashed mt-4 bg-gray-400">
+                <div class="flex items-center gap-20">
+                    <div class="grid grid-cols-3 gap-10 mt-4">
+                        <p class="text-gray-500 font-semibold flex items-center">A</p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">A1
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">A2
+                        </p>
+                        <p class="text-gray-500 font-semibold flex items-center">B</p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">B1
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">B2
+                        </p>
+                        <p class="text-gray-500 font-semibold flex items-center">C</p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">C1
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">C2
+                        </p>
+                        <p class="text-gray-500 font-semibold flex items-center">D</p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">D1
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">D2
+                        </p>
+                        <p class="text-gray-500 font-semibold flex items-center">E</p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">E1
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">E2
+                        </p>
+                        <p class="text-gray-500 font-semibold flex items-center">F</p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">F1
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">F2
+                        </p>
+                        <p class="text-gray-500 font-semibold flex items-center">G</p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">G1
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">G2
+                        </p>
+                        <p class="text-gray-500 font-semibold flex items-center">H</p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">H1
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">H2
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-10 mt-4">
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">A3
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">A4
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">B3
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">B4
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">C3
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">C4
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">D3
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">D4
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">E3
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">E4
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">F3
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">F4
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">G3
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">G4
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">H3
+                        </p>
+                        <p class="bg-zinc-100 px-10 py-5 text-center rounded-lg text-gray-500 font-semibold ticket">H4
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-2xl font-semibold">Select Your Seat</h2>
+                <hr class="border-dashed mt-4 bg-gray-400">
+                <div class="flex justify-between items-center mt-4 gap-40">
+                    <div>
+                        <p class=" text-gray-400 font-semibold">seat <span id="totalTicket"
+                                class="bg-green-300 rounded-xl p-1">0</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p class=" text-gray-400 font-semibold">Class</p>
+                    </div>
+                    <div>
+                        <p class=" text-gray-400 font-semibold">Price</p>
+                    </div>
+                </div>
+                <ul id="seats" class="grid grid-cols-3">
+
+                </ul>
+                <hr class="border-dashed mt-4 bg-gray-400">
+                <hr>
+                <div class="flex justify-between items-center mt-4">
+                    <div>
+                        <p class=" text-gray-500 font-semibold text-2xl">Total Price</p>
+                    </div>
+                    <div>
+                        <p class=" text-gray-500 font-semibold text-2xl">BDT <span id="total-price">0</span></p>
+                    </div>
+                </div>
+                <div id="coupon-field" class="mt-4">
+                    <input class="px-6 py-3 rounded-lg bg-slate-200" type="text" name="" id="coupon-input"
+                        placeholder="Have any coupon?">
+                    <button disabled id="apply-button"
+                        class="text-white bg-green-400 px-5 py-3 rounded-lg">Apply</button>
+                </div>
+                <div class="mt-4 flex justify-between items-center">
+                    <div>
+                        <p class=" text-gray-500 font-semibold text-2xl">Grand Total</p>
+                    </div>
+                    <div>
+                        <p class=" text-gray-500 font-semibold text-2xl">BDT <span id="grand-total">0</span></p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <form action="">
+                        <label class=" text-gray-400 font-semibold text-xl" for="Passenger Name">Passenger
+                            Name*</label><br>
+                        <input class="px-6 py-3 rounded-lg my-3 bg-slate-200" type="text" name="" id="name"
+                            placeholder="Enter Your Name">
+                    </form>
+                    <form action="">
+                        <label class=" text-gray-400 font-semibold text-xl" for="Phone Number">Phone Number*</label><br>
+                        <input class="px-6 py-3 rounded-lg my-3 bg-slate-200" type="text" name="" id="phone"
+                            placeholder="Enter Your Phone Number">
+                    </form>
+                    <form action="">
+                        <label class=" text-gray-400 font-semibold text-xl" for="Email Id">Email Id</label><br>
+                        <input class="px-6 py-3 rounded-lg mt-3 bg-slate-200" type="text" name="" id="email"
+                            placeholder="Enter Your Email Id">
+                    </form>
+                </div>
+                <button disabled onclick="my_modal_1.showModal()" id="next"
+                    class="text-white btn bg-green-400 px-24 py-3 rounded-lg mt-4">Next</button>
+                <dialog id="my_modal_1" class="modal">
+                    <div class="modal-box">
+                        <div class="flex justify-center my-3">
+                            <img src="images/success.png" alt="">
+                        </div>
+                        <h3 class="font-bold text-xl text-center text-green-400">Success!</h3>
+                        <p class="py-4 text-center text-2xl font-semibold">Thank you for Booking Our Bus Seats.
+
+                            We are working hard to find the best service and deals for you. </p>
+                        <p class="py-2 text-center text-lg font-semibold">Shortly you will find a confirmation in your
+                            email</p>
+                        <div class="modal-action">
+                            <form method="dialog">
+                                <button class="btn bg-green-400">Continue</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+
+                <div class="mt-12 flex justify-around">
+                    <a href="">Terms and condition</a>
+                    <a href="">Cancellation policy</a>
+                </div>
+            </div>
+
         </div>
     </section>
     <script src="hello.js"></script>
